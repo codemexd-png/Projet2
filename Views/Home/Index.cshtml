@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Accueil";
+}
+
+<div class="text-center mt-5">
+    <h1>Bienvenue!</h1>
+
+    @if (User?.Identity?.IsAuthenticated ?? false)
+    {
+        <p class="mt-3">Vous êtes connecté en tant que <strong>@User.Identity.Name</strong>.</p>
+    }
+    else
+    {
+        <p class="mt-3 text-muted">Vous n'êtes pas connecté.</p>
+        <a asp-controller="Account" asp-action="Register" class="btn btn-primary me-2">S'inscrire</a>
+        <a asp-controller="Account" asp-action="Login" class="btn btn-outline-primary">Se connecter</a>
+    }
+</div>
