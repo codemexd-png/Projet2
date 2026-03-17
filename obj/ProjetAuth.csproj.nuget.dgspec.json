@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jerry 107\\Desktop\\ProjetAuth\\ProjetAuth.csproj": {}
+    "C:\\Users\\dosso\\Source\\Repos\\Projet2\\ProjetAuth.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jerry 107\\Desktop\\ProjetAuth\\ProjetAuth.csproj": {
+    "C:\\Users\\dosso\\Source\\Repos\\Projet2\\ProjetAuth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jerry 107\\Desktop\\ProjetAuth\\ProjetAuth.csproj",
+        "projectUniqueName": "C:\\Users\\dosso\\Source\\Repos\\Projet2\\ProjetAuth.csproj",
         "projectName": "ProjetAuth",
-        "projectPath": "C:\\Users\\Jerry 107\\Desktop\\ProjetAuth\\ProjetAuth.csproj",
-        "packagesPath": "C:\\Users\\Jerry 107\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jerry 107\\Desktop\\ProjetAuth\\obj\\",
+        "projectPath": "C:\\Users\\dosso\\Source\\Repos\\Projet2\\ProjetAuth.csproj",
+        "packagesPath": "C:\\Users\\dosso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dosso\\Source\\Repos\\Projet2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Jerry 107\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dosso\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -92,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
