@@ -9,6 +9,7 @@ using ProjetAuth.Services;
 
 namespace ProjetAuth.Controllers;
 
+//A mofifier en adaptant à IDentity  Jerry!!!!
 public class AccountController : Controller
 {
     private readonly ApplicationDbContext _db;
@@ -34,22 +35,17 @@ public class AccountController : Controller
         }
 
         var normalizedEmail = model.Email.Trim().ToLowerInvariant();
-        var exists = await _db.AppUsers.AnyAsync(u => u.Email.ToLower() == normalizedEmail);
-        if (exists)
-        {
-            ModelState.AddModelError(nameof(RegisterViewModel.Email), "Ce courriel est déjà utilisé.");
-            return View(model);
-        }
+       
 
         var (hashBase64, saltBase64) = PasswordHashing.Hash(model.Password);
         var user = new AppUser
         {
             Email = model.Email.Trim(),
             PasswordHash = hashBase64,
-            PasswordSalt = saltBase64
+          
         };
 
-        _db.AppUsers.Add(user);
+     
         await _db.SaveChangesAsync();
 
         await SignInAsync(user, isPersistent: false);
@@ -79,14 +75,8 @@ public class AccountController : Controller
         }
 
         var normalizedEmail = model.Email.Trim().ToLowerInvariant();
-        var user = await _db.AppUsers.FirstOrDefaultAsync(u => u.Email.ToLower() == normalizedEmail);
-        if (user is null || !PasswordHashing.Verify(model.Password, user.PasswordSalt, user.PasswordHash))
-        {
-            ModelState.AddModelError(string.Empty, "Courriel ou mot de passe incorrect.");
-            return View(model);
-        }
-
-        await SignInAsync(user, model.RememberMe);
+      
+       
 
         var returnUrl = model.ReturnUrl;
         if (!string.IsNullOrWhiteSpace(returnUrl) && Url.IsLocalUrl(returnUrl))
